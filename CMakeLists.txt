@@ -3,7 +3,7 @@ project(Timber)
 
 set(SFML_STATIC_LIBRARIES TRUE)
 set(CMAKE_CXX_STANDARD 14)
-find_package(SFML 2.5 COMPONENTS system window graphics)
+find_package(SFML 2.5 COMPONENTS system window graphics audio REQUIRED)
 
 add_executable(Timber Timber.cpp)
-target_link_libraries(Timber sfml-system sfml-window sfml-graphics -static)
+target_link_libraries(Timber sfml-system sfml-window sfml-graphics sfml-audio -static)
