@@ -274,6 +274,11 @@ int main() {
 
                 score++;
 
+                // Update the score text
+                std::stringstream ss;
+                ss << "Score = " << score;
+                scoreText.setString(ss.str());
+
                 // Add to the amount of time remaining
                 timeRemaining += (2 / score) + .15;
 
@@ -303,6 +308,11 @@ int main() {
                 playerSide = side::LEFT;
 
                 score++;
+
+                // Update the score text
+                std::stringstream ss;
+                ss << "Score = " << score;
+                scoreText.setString(ss.str());
 
                 // Add to the amount of time remaining
                 timeRemaining += (2 / score) + .15;
@@ -411,11 +421,6 @@ int main() {
                     }
                 }
             }
-
-            // Update the score text
-            std::stringstream ss;
-            ss << "Score = " << score;
-            scoreText.setString(ss.str());
 
             // Update the branch sprites
             for (int i = 0; i < NUM_BRANCHES; ++i) {
